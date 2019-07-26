@@ -5,15 +5,33 @@
   <groupId>trinhlk.bip</groupId>
   <artifactId>JavaBIPExample</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <packaging>jar</packaging>
+  <packaging>pom</packaging>
 
   <name>JavaBIPExample</name>
   <url>http://maven.apache.org</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	<org.bip.lsr.version>0.1.0-SNAPSHOT</org.bip.lsr.version>
   </properties>
 
+	<profiles>
+		<profile>
+			<id>ct</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<modules>
+				<module>lsr</module>
+			</modules>
+		</profile>
+		<profile>
+			<id>epfl</id>
+			<modules>
+				<module>lsr</module>
+			</modules>
+		</profile>
+	</profiles>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>

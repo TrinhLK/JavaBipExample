@@ -12,26 +12,10 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	<org.bip.lsr.version>0.1.0-SNAPSHOT</org.bip.lsr.version>
+	
   </properties>
 
-	<profiles>
-		<profile>
-			<id>ct</id>
-			<activation>
-				<activeByDefault>true</activeByDefault>
-			</activation>
-			<modules>
-				<module>lsr</module>
-			</modules>
-		</profile>
-		<profile>
-			<id>epfl</id>
-			<modules>
-				<module>lsr</module>
-			</modules>
-		</profile>
-	</profiles>
+	
   <dependencies>
     <dependency>
       <groupId>junit</groupId>

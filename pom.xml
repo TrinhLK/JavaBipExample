@@ -12,7 +12,7 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	<org.bip.lsr.version>0.1.0-SNAPSHOT</org.bip.lsr.version>
+	
   </properties>
 
 	

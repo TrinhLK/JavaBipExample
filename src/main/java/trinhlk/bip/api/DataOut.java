@@ -9,6 +9,7 @@
 package trinhlk.bip.api;
 
 import java.util.Set;
+import trinhlk.bip.annotations.*;
 
 /**
  * It specifies the interface for data being provided by BIP component.

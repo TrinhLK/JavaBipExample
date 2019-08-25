@@ -28,13 +28,13 @@ public class TestPubSub implements Runnable {
 		msgs.add("bonjour");
 		msgs.add("hello");
 		int error = 0;
-
+		System.out.println("before try");
 		try {
 			Socket connection = new Socket(host, port);
 
 			ClientOutputWriter output = new ClientOutputWriter(connection.getOutputStream());
 			InputChecker inputCheck = new InputChecker(new ClientInputReader(connection.getInputStream()));
-
+			System.out.println("defined");
 			// with two topics
 			// System.out.println("**** TEST 2 ***");
 			// error = 0;
@@ -53,9 +53,10 @@ public class TestPubSub implements Runnable {
 
 			output.unsubscribeTo(topics.get(1));
 			}
-
-
+			connection.close();
+			
 		} catch (IOException e) {
+			
 			System.err.println("Fail to accept client connection");
 
 		}

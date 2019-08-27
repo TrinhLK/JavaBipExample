@@ -26,6 +26,5 @@
 	<classpathentry kind="lib" path="D:/Work Space/JavaBipExample/extended libs/org.bip.lsr-0.1.0-SNAPSHOT.jar"/>
 	<classpathentry kind="lib" path="D:/Work Space/JavaBipExample/lib/org.bip.engine-0.1.0-SNAPSHOT.jar"/>
 	<classpathentry kind="lib" path="D:/Work Space/JavaBipExample/lib/org.bip.executor.impl-0.1.0-SNAPSHOT.jar"/>
-	<classpathentry kind="lib" path="D:/Work Space/JavaBipExample/lib/org.bip.jmx-0.1.0-SNAPSHOT.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

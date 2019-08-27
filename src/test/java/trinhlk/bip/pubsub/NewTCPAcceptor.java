@@ -6,9 +6,15 @@ import java.net.ServerSocket;
 import org.bip.engine.*;
 import org.bip.engine.api.*;
 import org.bip.executor.impl.akka.OrchestratedExecutorFactory;
+import org.junit.*;
+import org.junit.Before;
+
+import com.typesafe.config.ConfigFactory;
 
 import trinhlk.bip.api.*;
+import trinhlk.bip.glue.TwoSynchronGlueBuilder;
 import trinhlk.bip.spec.pubsub.typed.*;
+import akka.actor.*;
 
 /*
 import org.bip.engine.BIPCoordinatorImpl;
@@ -55,15 +61,15 @@ public class NewTCPAcceptor {
 
 	}
 
+	@Test
 	public void main() {
 		int BUFFER_SIZE = 10;
 
 		try {
 			ServerSocket tcpacceptor = new ServerSocket(7676);
+		BIPGlue temp = (BIPGlue) new DataCoordinatorKernel(new BIPCoordinatorImpl(system));
 
-
-
-		BIPEngine engine = engineFactory.create("myEngine", new DataCoordinatorKernel(new BIPCoordinatorImpl(system)));
+		BIPEngine engine = engineFactory.create("myEngine", temp);
 
 		BIPGlue bipGlue = new TwoSynchronGlueBuilder() {
 			@Override

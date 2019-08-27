@@ -11,7 +11,7 @@ package trinhlk.bip.core.annotations;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-import org.bip.api.DataOut.AccessType;
+import trinhlk.bip.core.api.DataOut.AccessType;
 
 /**
  * It is used to annotated data sent between BIP components. It can be used as annotation on the code 

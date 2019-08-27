@@ -6,7 +6,7 @@
  * Date: 10/15/12
  */
 
-package org.bip.annotations;
+package trinhlk.bip.core.annotations;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

@@ -11,7 +11,7 @@ package trinhlk.bip.core.annotations;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-import org.bip.api.PortType;
+import trinhlk.bip.core.api.PortType;
 
 /**
  * It specifies the name and the type of the port.

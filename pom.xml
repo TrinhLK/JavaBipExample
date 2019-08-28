@@ -9,7 +9,27 @@
 
   <name>JavaBIPExample</name>
   <url>http://maven.apache.org</url>
+
+	
+    
   <dependencies>
+  
+  	<dependency>
+	  <groupId>bip_engine</groupId>
+	  <artifactId>org.bip.engine</artifactId>
+	  <version>0.1.0</version>
+	  <scope>system</scope>
+	  <systemPath>
+	    ${basedir}\lib\org.bip.engine-0.1.0-SNAPSHOT.jar
+	  </systemPath>
+	</dependency>
+	
+  	<dependency>
+		<groupId>net.sf.javabdd</groupId>
+		<artifactId>javabdd</artifactId>
+		<version>1.0b2</version>
+	</dependency>
+	
   	<dependency>
 	    <groupId>junit</groupId>
 	    <artifactId>junit</artifactId>
@@ -34,6 +54,13 @@
 	    <groupId>org.antlr</groupId>
 	    <artifactId>antlr4-runtime</artifactId>
 	    <version>4.7.2</version>
+	</dependency>
+	
+	<!-- For testing camel route -->
+	<dependency>
+	    <groupId>org.apache.camel</groupId>
+	    <artifactId>camel-core</artifactId>
+	    <version>3.0.0-M4</version>
 	</dependency>
   </dependencies>
 <!-- 

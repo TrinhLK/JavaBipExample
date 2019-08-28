@@ -21,6 +21,20 @@
    		<artifactId>akka-actor_2.10</artifactId>
    		<version>2.1.1</version>
    	</dependency>
+   	
+   	<!-- for the executor to log -->
+   	<dependency>
+    	<groupId>org.slf4j</groupId>
+    	<artifactId>slf4j-api</artifactId>
+    	<version>2.0.0-alpha0</version>
+	</dependency>
+	
+	<!-- build tree for ExecutableTransitionImpl -->
+	<dependency>
+	    <groupId>org.antlr</groupId>
+	    <artifactId>antlr4-runtime</artifactId>
+	    <version>4.7.2</version>
+	</dependency>
   </dependencies>
 <!-- 
   <properties>	

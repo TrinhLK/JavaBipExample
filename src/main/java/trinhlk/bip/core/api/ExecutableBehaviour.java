@@ -8,8 +8,8 @@
 
 package trinhlk.bip.core.api;
 
+import java.lang.invoke.MethodHandle;
 import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -65,7 +65,7 @@ public interface ExecutableBehaviour extends Behaviour {
 	 *
 	 * @return the data out mapping
 	 */
-	public Map<String, Method> getDataOutMapping();
+	public Map<String, MethodHandle> getDataOutMapping();
 
 	/**
 	 * Check enabledness.
@@ -129,4 +129,13 @@ public interface ExecutableBehaviour extends Behaviour {
 	 * @return the hashtable
 	 */
 	public Map<String, Boolean> computeGuardsWithoutData();
+	
+	/**
+	 * Compute guards.
+	 * @param String currentState
+	 * @return the hashtable
+	 * @throws InvocationTargetException 
+	 * @throws IllegalAccessException 
+	 */
+	public Map<String, Boolean> computeGuardsWithoutData(String getCurState) throws IllegalAccessException, InvocationTargetException;
 }

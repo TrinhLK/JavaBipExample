@@ -6,16 +6,17 @@ import org.apache.camel.Exchange;
 import org.apache.camel.Route;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.impl.DefaultCamelContext;
+import org.apache.camel.impl.engine.AbstractCamelContext;
 import org.apache.camel.spi.RoutePolicy;
-import org.bip.engine.*;
-import org.bip.engine.api.EngineFactory;
+import trinhlk.bip.engine.*;
+import trinhlk.bip.engine.factory.EngineFactory;
 import trinhlk.bip.core.api.BIPActor;
 import trinhlk.bip.core.api.BIPEngine;
 import trinhlk.bip.core.api.BIPGlue;
 import trinhlk.bip.core.exceptions.BIPException;
 import trinhlk.bip.glue.TwoSynchronGlueBuilder;
 //import trinhlk.bip.glue.ManySynchronGlueBuilder;
-//import org.javabip.spec.*;
+import trinhlk.bip.spec.*;
 
 public class SpiralsDemo {
     private ActorSystem system;
@@ -99,17 +100,17 @@ public class SpiralsDemo {
         }
 
 		try {
-            camelContext.suspendRoute("1");
-            camelContext.suspendRoute("2");
-            camelContext.suspendRoute("3");
-            camelContext.suspendRoute("4");
+            ((AbstractCamelContext) camelContext).suspendRoute("1");
+            ((AbstractCamelContext) camelContext).suspendRoute("2");
+            ((AbstractCamelContext) camelContext).suspendRoute("3");
+            ((AbstractCamelContext) camelContext).suspendRoute("4");
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     private void Coordinated (Object monitor, BIPGlue bipGlue) {
-
+    	
         // Create a BIP engine
         final BIPEngine engine = engineFactory.create("myEngine", bipGlue);
 
